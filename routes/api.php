@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Api\CityController;
+use App\Http\Controllers\API\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -19,5 +21,15 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route ::get('/test',function (){
-    echo "Welcome Api";
+   
+    echo "Welcome api";
 });
+
+
+
+//City-Resources
+Route::resource('city', CityController::class);
+
+//User-Resources
+Route::resource('user', UserController::class);
+
